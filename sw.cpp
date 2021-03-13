@@ -4,6 +4,36 @@
 #define MAXSEQ 1000
 #define GAP_CHAR '-'
 
+/* example1 
+The 1st seq: acgt
+The 2nd seq: acgt
+    0    -7   -14   -21   -28 
+   -7     5    -2    -9   -16 
+  -14    -2    10     3    -4 
+  -21    -9     3    15     8 
+  -28   -16    -4     8    20 
+max score: 20
+ACGT
+ACGT
+*/
+
+/* example2 
+The 1st seq: aagt
+The 2nd seq: agt
+    0    -7   -14   -21 
+   -7     5    -2    -9 
+  -14    -2     1    -6 
+  -21    -9     3    -3 
+  -28   -16    -4     8 
+max score: 8
+AAGT
+A-GT
+
+AAGT
+-AGT
+*/
+
+
 // 对空位的罚分是线性的
 struct Unit {
   int W1;  // 是否往上回溯一格
