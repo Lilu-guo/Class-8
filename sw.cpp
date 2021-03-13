@@ -46,8 +46,11 @@ float max3(float a, float b, float c) {
   return f > c ? f : c;
 }
 
-// 替换矩阵：match分值为5，mismatch分值为-4
+// 替换矩阵：match分值为5，mismatch分值为-4，其它字符为0
 // 数组下标是两个字符的ascii码减去65之后的和
+// 0   1   2   3   4   5   6   ...
+// AA  x   AC  x   CC  x   AG
+//         CA              GA
 float FMatrix[] = {5, 0, -4, 0, 5, 0, -4, 0, -4, 0, 0, 0, 5,
                    0, 0, 0,  0, 0, 0, -4, 0, -4, 0, 0, 0, -4,
                    0, 0, 0,  0, 0, 0, 0,  0, 0,  0, 0, 0, 5};
